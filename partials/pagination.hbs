@@ -1,0 +1,23 @@
+<section>
+    <div class="columns pagination has-text-left">
+        <div class="column">
+            {{#if prev}}
+                <a href="{{page_url prev}}" class="pagination-next">
+                    Postagens mais novas
+                </a>
+            {{/if}}
+        </div>
+        <div class="column has-text-centered">
+            <span class="pagination-link is-current">
+                Página {{page}} de {{pages}}
+            </span>
+        </div>
+        <div class="column has-text-right">
+            {{#if next}}
+                <a href="{{page_url next}}" class="pagination-previous">
+                    Posts Antigos
+                </a>
+            {{/if}}
+        </div>
+    </div>
+</section>

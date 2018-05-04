@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
+// Set your brand colors
+$dark-cerulean: #134074;
+$prussian-blue: #13315C;
+$oxford-blue: #0B2545;
+$pewter-blue: #8DA9C4;
+$isabelline: #EEF4ED;
+
+// Update Bulma's global variables
+$family-sans-serif: "Nunito", serif;
+// $grey-dark: $oxford-blue;
+$grey-light: $pewter-blue;
+$primary: $dark-cerulean;
+$link: $dark-cerulean;
+
+// Update some of Bulma's component variables
+$control-border-width: 2px;
+$input-background-color: $isabelline;
+$input-border-color: transparent;
+$input-shadow: none;
+
+@import "../../node_modules/bulma/bulma.sass";
+
+.is-primary.is-primary-black {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #000000;
+}
+
+.navbar-item {
+    img {
+        max-height: 2.75rem;
+    }
+
+    .navbar-brand-text {
+        line-height: 1em;
+        padding-left: 1em;
+    }
+}
+
+.media-left {
+    img {
+        // padding: 5px;
+        // background: #fff;
+        border-radius: 50%;
+        // -webkit-box-shadow: 0 2px 3px rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.1);
+        // box-shadow: 0 2px 3px rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.1);
+    }
+}
+
+.card-background {
+    background-size: cover;
+}
+
+.footer {
+    padding: 1rem 0.5rem 1rem;
+}

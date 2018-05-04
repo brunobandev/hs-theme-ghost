@@ -1,0 +1,67 @@
+<nav class="navbar is-fixed-top is-primary">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="{{@blog.url}}">
+                {{#if @blog.logo}}
+                <img src="{{@blog.logo}}" alt="{{@blog.title}}" />
+                {{/if}}
+                <p class="navbar-brand-text">
+                    <strong>TAVERNA</strong>
+                    <br> HEARTHSTONE
+                </p>
+            </a>
+            <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div id="navbarExampleTransparentExample" class="navbar-menu">
+            <div class="navbar-start is-uppercase">
+                {{#foreach navigation}}
+                <a href="{{url absolute=" true "}}" class="navbar-item"><strong>{{label}}</strong></a>
+                {{/foreach}}
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="field is-grouped">
+                        <p class="control">
+                            <a class="button is-primary is-hovered" href="https://discord.gg/w5HmCxm" target="_blank">
+                                <span class="icon">
+                                    <i class="fab fa-discord"></i>
+                                </span>
+                                <span>Entrar na <strong>Taverna Hearthstone</strong></span>
+                            </a>
+                        </p>
+                        <p class="control">
+                            <a class="button is-primary" data-social-network="Twitter" data-social-action="tweet" data-social-target="{{@blog.url}}"
+                                target="_blank" href="{{twitter_url @blog.twitter}}">
+                                <span class="icon">
+                                    <i class="fab fa-twitter"></i>
+                                </span>
+                            </a>
+                        </p>
+                        <p class="control">
+                            <a class="button is-primary" data-social-network="Facebook" data-social-action="facebook" data-social-target="{{@blog.url}}"
+                                target="_blank" href="{{facebook_url @blog.facebook}}">
+                                <span class="icon">
+                                    <i class="fab fa-facebook-f"></i>
+                                </span>
+                            </a>
+                        </p>
+                        <p class="control">
+                            <a class="button is-primary" data-social-network="Twitch" data-social-action="twitch" data-social-target="{{@blog.url}}"
+                                target="_blank" href="https://www.twitch.tv/tavernahearthstone">
+                                <span class="icon">
+                                    <i class="fab fa-twitch"></i>
+                                </span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

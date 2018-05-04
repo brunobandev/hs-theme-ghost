@@ -1,0 +1,21 @@
+{
+  "name": "taverna-hearthstone",
+  "version": "0.0.1",
+  "description": "",
+  "author": {
+    "name": "Bruno Bandeira",
+    "email": "brunoban.dev@gmail.com"
+  },
+  "config": {
+    "posts_per_page": 6
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "bulma": "^0.7.1",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8"
+  }
+}

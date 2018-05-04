@@ -1,0 +1,14 @@
+{{!< default}}
+
+<section class="section">
+    <div class="container">
+        <div class="columns is-multiline">
+            {{#foreach posts}}
+                <div class="column is-4">
+                {{> post_card}}
+                </div>
+            {{/foreach}}
+        </div>
+        {{pagination}}
+    </div>
+</section>

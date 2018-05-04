@@ -1,0 +1,76 @@
+{{!< default}}
+
+{{#post}}
+<section class="section">
+    <div class="container">
+        <div class="columns is-mobile">
+            <div class="column is-8 is-offset-2">
+
+                    <div class="media">
+                        {{#primary_author}}
+                        {{#if profile_image}}
+                        <div class="media-left">
+                            <figure class="image is-64x64">
+                                <img src="{{profile_image}}" alt="{{name}}">
+                            </figure>
+                        </div>
+                        {{/if}}
+                        <div class="media-content">
+                             <div class="field is-grouped">
+                                <p class="control title is-4">{{name}}</p>
+                                {{#if twitter}}
+                                <p class="control">
+                                    <a class="button is-primary is-small is-outlined" data-social-network="Twitter" data-social-action="tweet" data-social-target="{{@blog.url}}"
+                                        target="_blank" href="{{twitter_url}}">
+                                        <span class="icon is-small">
+                                            <i class="fab fa-twitter"></i>
+                                        </span>
+                                        <span>{{twitter}}</span>
+                                    </a>
+                                </p>
+                                {{/if}}
+                                {{#if facebook}}
+                                <p class="control">
+                                    <a class="button is-primary is-small is-outlined" data-social-network="Facebook" data-social-action="facebook" data-social-target="{{@blog.url}}"
+                                        target="_blank" href="{{facebook_url}}">
+                                        <span class="icon is-small">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </span>
+                                        <span>facebook</span>
+                                    </a>
+                                </p>
+                                {{/if}}
+                            </div>
+                            <p class="subtitle is-6">{{bio}}</p>
+                        </div>
+                        {{/primary_author}}
+                        <div class="media-right">
+                            <p>
+                                <strong>Postado em </strong>
+                                <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
+                            </p>
+                            {{#primary_tag}}
+                            <p>
+                               <span class="tag is-link">{{name}}</span>
+                            </p>
+                            {{/primary_tag}}
+                        </div>
+                    </div>
+                <hr>
+                <div class="content">
+                    <p class="title">{{title}}</p>
+                    {{#if feature_image}}
+                    <section class="hero is-primary" style="background-image: url({{img_url feature_image}}); background-size:cover; background-position: center;">
+                        <div class="hero-body">
+                        </div>
+                    </section>
+                    <br>
+                    {{/if}}
+                    {{content}}
+                </div>
+            <hr>
+            </div>
+        </div>
+    </div>
+</section>
+{{/post}}
